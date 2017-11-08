@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @datum.address %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @datum.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @datum.latitude %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @datum.description %>
+</p>
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_path %>
