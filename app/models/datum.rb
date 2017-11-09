@@ -27,8 +27,9 @@ class Datum < ApplicationRecord
 			datas_json << data_json
        end
 
-      File.open('public/mapdata.json','w') do |f|
-        f.write datas_json.to_s
+      File.open('public/mapdata.geojson','w') do |f|
+        #instead of gsub you can use trim('[]','') ,also works like charm
+        f.write datas_json.to_json.gsub(/^\[+|\]+$/, '')
        end
 	end
 end
